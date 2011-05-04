@@ -163,6 +163,19 @@ __PACKAGE__->has_many(
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
+=head 2 assays
+
+Type: many_to_many
+
+Related object: L<Bio::Chado::Schema::Mage::Assay>
+
+=cut
+
+__PACKAGE__->many_to_many(
+  "assays",
+  "assay_projects",
+  "assay",
+);
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-03-16 23:09:59
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Jjxb5riOuJ7j4FstJjThDw
